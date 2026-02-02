@@ -56,15 +56,18 @@ function drawStart() {
 // ------------------------------------------------------------
 // Called from main.js only when currentScreen === "start"
 function startMousePressed() {
-  // For input checks, we only need x,y,w,h (label is optional)
   const startBtn = { x: width / 2, y: 320, w: 240, h: 80 };
   const instrBtn = { x: width / 2, y: 430, w: 240, h: 80 };
 
-  // If START is clicked, go to the game screen
+  // START button clicked → go to game and reset stats
   if (isHover(startBtn)) {
     currentScreen = "game";
+    connection = 40; // reset connection stat
+    delay = 0; // reset delay stat
+    currentScene = 0; // start at first scene
+    path = ""; // clear choice path
   }
-  // If INSTRUCTIONS is clicked, go to the instructions screen
+  // INSTRUCTIONS button clicked → go to instructions
   else if (isHover(instrBtn)) {
     currentScreen = "instr";
   }
@@ -77,10 +80,16 @@ function startMousePressed() {
 // - ENTER starts the game
 // - I opens instructions
 function startKeyPressed() {
+  // ENTER → start game and reset stats
   if (keyCode === ENTER) {
     currentScreen = "game";
+    connection = 40;
+    delay = 0;
+    currentScene = 0;
+    path = "";
   }
 
+  // I → go to instructions
   if (key === "i" || key === "I") {
     currentScreen = "instr";
   }

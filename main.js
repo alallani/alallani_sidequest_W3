@@ -21,44 +21,56 @@
 //
 // We store the “name” of the current screen as a string.
 // Only one screen should be active at a time.
-let currentScreen = "start"; // "start" | "instr" | "game" | "win" | "lose"
-
 // ------------------------------
-// setup() runs ONCE at the beginning
-// ------------------------------
-// This is where you usually set canvas size and initial settings.
-function setup() {
-  createCanvas(800, 800);
+/** * GLOBAL VARIABLES
+ * These live here so every other file can see them.
+ */
+let imgIntro, imgKitchen, imgStation, imgApex;
+let connection = 40; // Sam starts at a breaking point
+let totalDelay = 0; // Starts at 0, tracks "Damage Control"
+let currentScreen = "intro";
 
-  // Sets a default font for all text() calls
-  // (This can be changed later per-screen if you want.)
-  textFont("sans-serif");
+// Logic trackers for branching
+let path1Choice = ""; // Stores "sit" or "coffee"
+let path2Choice = ""; // Stores "uber", "wait", "focus", or "call"
+let path3Choice = 0; // Stores 1 (Left Button) or 2 (Right Button)
+
+function preload() {
+  // Path: assets folder -> images folder -> filename
+  imgIntro = loadImage("assets/images/intro_image.png");
+  imgKitchen = loadImage("assets/images/kitchen_image.png");
+  imgStation = loadImage("assets/images/station_image.png");
+  imgApex = loadImage("assets/images/apex_image.jpg");
 }
 
-// ------------------------------
-// draw() runs every frame (many times per second)
-// ------------------------------
-// This is the core “router” for visuals.
-// Depending on currentScreen, we call the correct draw function.
+/** SETUP & DRAW */
+function setup() {
+  createCanvas(900, 600);
+  textAlign(CENTER, CENTER);
+}
+
 function draw() {
-  // Each screen file defines its own draw function:
-  //   start.js         → drawStart()
-  //   instructions.js  → drawInstr()
-  //   game.js          → drawGame()
-  //   win.js           → drawWin()
-  //   lose.js          → drawLose()
+  background(20); // Dark theme for the "alarm failed" dread
 
-  if (currentScreen === "start") drawStart();
-  else if (currentScreen === "instr") drawInstr();
-  else if (currentScreen === "game") drawGame();
-  else if (currentScreen === "win") drawWin();
-  else if (currentScreen === "lose") drawLose();
-
-  // (Optional teaching note)
-  // This “if/else chain” is a very common early approach.
-  // Later in the course you might replace it with:
-  // - a switch statement, or
-  // - an object/map of screens
+  // THE SWITCHBOARD
+  // This directs p5.js to the correct file's draw function
+  if (currentScreen === "intro") {
+    drawIntro();
+  } else if (currentScreen === "kitchen") {
+    drawKitchen();
+  } else if (currentScreen === "station") {
+    drawStation();
+  } else if (currentScreen === "apex") {
+    drawApex();
+  } else if (currentScreen === "results") {
+    drawResults();
+  } else if (currentScreen === "kitchen_result") {
+    drawKitchenResult();
+  } else if (currentScreen === "station_result") {
+    drawStationResult();
+  } else if (currentScreen === "apex_result") {
+    drawApexResults();
+  }
 }
 
 // ------------------------------
@@ -72,14 +84,17 @@ function mousePressed() {
   // game.js          → gameMousePressed()
   // win.js           → winMousePressed()
   // lose.js          → loseMousePressed()
-
-  if (currentScreen === "start") startMousePressed();
-  else if (currentScreen === "instr") instrMousePressed();
-  else if (currentScreen === "game") gameMousePressed();
   // The ?.() means “call this function only if it exists”
   // This prevents errors if a screen doesn’t implement a handler.
-  else if (currentScreen === "win") winMousePressed?.();
-  else if (currentScreen === "lose") loseMousePressed?.();
+
+  if (currentScreen === "intro") introMousePressed();
+  else if (currentScreen === "kitchen") kitchenMousePressed();
+  else if (currentScreen === "kitchen_result") kitchenResultMousePressed();
+  else if (currentScreen === "station") stationMousePressed();
+  else if (currentScreen === "station_result") stationResultMousePressed();
+  else if (currentScreen === "apex") apexMousePressed();
+  else if (currentScreen === "results") resultsMousePressed();
+  else if (currentScreen === "apex_result") apexResultsMousePressed();
 }
 
 // ------------------------------
