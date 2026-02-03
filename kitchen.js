@@ -32,7 +32,7 @@ function drawKitchen() {
   textLeading(24);
 
   let story =
-    "Sam is standing by the counter, a coffee already poured for you: “I know today is important, but I can’t keep being the only one showing up for us. Can you sit for a bit…please?”";
+    "Sam is standing by the counter with a coffee already poured for you. “I know today is important, but I can’t keep being the only one showing up for us. Can you sit for a bit…please?”";
 
   // Calculate dynamic height for the text block
   let textHeight = max(getTextBlockHeight(story, TEXT_W), MIN_TEXT_H);
@@ -55,7 +55,7 @@ function drawKitchen() {
   };
 
   drawSceneButton(btnSit, "Sit and talk to Sam");
-  drawSceneButton(btnCoffee, "Take the coffee and go");
+  drawSceneButton(btnCoffee, "Take the coffee to go");
 
   pop();
 }
@@ -66,7 +66,7 @@ function kitchenMousePressed() {
     TEXT_Y +
     max(
       getTextBlockHeight(
-        "Sam is standing by the counter, a coffee already poured for you: “I know today is important, but I can’t keep being the only one showing up for us. Can you sit for a bit…please?”",
+        "Sam is standing by the counter with a coffee already poured for you. “I know today is important, but I can’t keep being the only one showing up for us. Can you sit for a bit…please?”",
         TEXT_W,
       ),
       MIN_TEXT_H,

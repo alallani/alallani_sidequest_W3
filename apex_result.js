@@ -19,14 +19,14 @@ function drawApexResults() {
   if (path2Choice === "uber") {
     if (path3Choice === 1)
       resultText =
-        "You stop in the hallway, your thumbs flying across your phone. You thank Sam for checking in and tell her how much she means to you.";
+        "You stop in the hallway and unlock your phone. You thank Sam for checking in and tell her how much she means to you.";
     else
       resultText =
         "You put your phone on silent and step into the room. You can reach out to Sam later, but the presentation needs to be done now.";
   } else if (path2Choice === "wait") {
     if (path3Choice === 1)
       resultText =
-        "All but one of the elevators are broken, and it’s notoriously slow. You fill the wait by scrolling through your Photos app, smiling at pictures of you and Sam.";
+        "All but one of the elevators are broken, and it’s agonizingly slow. You fill the wait by scrolling through your Photos app, smiling at pictures of you and Sam.";
     else
       resultText =
         "You bolt for the stairs, taking them two at a time. By the 10th floor, you’re gasping for air. Sam is the furthest thing from your mind.";
@@ -43,7 +43,7 @@ function drawApexResults() {
         "You put your phone on silent and step into the room. You can reach out to Sam later, but the presentation needs to be done now.";
     else
       resultText =
-        "You stop in the hallway, telling Sam how much she means to you and promising to finally plan a holiday together.";
+        "You stop in the hallway and tell Sam how much she means to you. You promise to finally plan a holiday together.";
   }
 
   // Draw Outcome Text
@@ -61,7 +61,7 @@ function drawApexResults() {
     w: BUTTON_W,
     h: BUTTON_H,
   };
-  drawSceneButton(btn, "See Final Outcome");
+  drawSceneButton(btn, "Find out your fate");
   pop();
 }
 
@@ -87,12 +87,12 @@ function apexResultsMousePressed() {
 function getApexResultText() {
   if (path2Choice === "uber") {
     return path3Choice === 1
-      ? "You stop in the hallway, your thumbs flying across your phone. You thank Sam for checking in and tell her how much she means to you."
+      ? "You stop in the hallway and unlock your phone. You thank Sam for checking in and tell her how much she means to you."
       : "You put your phone on silent and step into the room. You can reach out to Sam later, but the presentation needs to be done now.";
   }
   if (path2Choice === "wait") {
     return path3Choice === 1
-      ? "All but one of the elevators are broken, and it’s notoriously slow. You fill the wait by scrolling through your Photos app, smiling at pictures of you and Sam."
+      ? "All but one of the elevators are broken, and it’s agonizingly slow. You fill the wait by scrolling through your Photos app, smiling at pictures of you and Sam."
       : "You bolt for the stairs, taking them two at a time. By the 10th floor, you’re gasping for air. Sam is the furthest thing from your mind.";
   }
   if (path2Choice === "focus") {
@@ -103,7 +103,7 @@ function getApexResultText() {
   if (path2Choice === "call") {
     return path3Choice === 1
       ? "You put your phone on silent and step into the room. You can reach out to Sam later, but the presentation needs to be done now."
-      : "You stop in the hallway, telling Sam how much she means to you and promising to finally plan a holiday together.";
+      : "You stop in the hallway and tell Sam how much she means to you. You promise to finally plan a holiday together.";
   }
   return "";
 }

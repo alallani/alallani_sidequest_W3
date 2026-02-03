@@ -26,7 +26,7 @@ function drawStation() {
 
   if (path1Choice === "sit") {
     story =
-      "You arrive at the station just in time to see the bus pull away. Your heart pounds with anxiety as you stare at the empty curb.";
+      "You arrive at the station just in time to see the train pull away. Your heart pounds with anxiety as you stare at the empty platform.";
     btn1Label = "Book an Uber";
     btn2Label = "Wait for the next train";
   } else {
@@ -69,7 +69,7 @@ function stationMousePressed() {
   // We need to recalculate the dynamic Y for clicks
   let story =
     path1Choice === "sit"
-      ? "You arrive at the station just in time to see the train pull away. Your heart pounds with anxiety as you look at the empty curb."
+      ? "You arrive at the station just in time to see the train pull away. Your heart pounds with anxiety as you stare at the empty platform."
       : "You arrive at the station with time to spare, but your mind feels scattered.";
 
   let textHeight = max(getTextBlockHeight(story, TEXT_W), MIN_TEXT_H);

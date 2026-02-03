@@ -28,21 +28,21 @@ function drawApex() {
     story =
       "You stumble out of the Uber, checking your watch. You’re cutting it close, but you feel guilty for ignoring Sam’s text earlier.";
     btn1Label = "Respond to Sam";
-    btn2Label = "Head to boardroom";
+    btn2Label = "Head straight to the boardroom";
   } else if (path2Choice === "wait") {
     story =
-      "You rush toward the elevators, catching a glimpse of your client as the doors slide shut. You’re on the ground floor; the meeting is on the 10th.";
-    btn1Label = "Wait for elevator";
+      "You rush toward the elevators, catching a glimpse of your client as the doors slide shut. You’re on the ground floor...the meeting is on the 10th.";
+    btn1Label = "Wait for the next elevator";
     btn2Label = "Take the stairs";
   } else if (path2Choice === "focus") {
     story =
       "As you exit the bus, your phone buzzes. It’s a text from Sam: “I’m packing a bag. I need to stay at my sister’s for a while.”";
-    btn1Label = "Head to boardroom";
+    btn1Label = "Head straight to the boardroom";
     btn2Label = "Call Sam";
   } else if (path2Choice === "call") {
     story =
-      "As you walk into Apex, you check your phone. No response to your voicemail. Was a voicemail enough to fix this?";
-    btn1Label = "Head to boardroom";
+      "As you walk into Apex, you check your phone. No response to your voicemail. You know it hasn’t been long. Still, you can’t help but worry – was a voicemail enough to fix this?";
+    btn1Label = "Head straight to the boardroom";
     btn2Label = "Text Sam";
   }
 
@@ -83,13 +83,13 @@ function apexMousePressed() {
       "You stumble out of the Uber, checking your watch. You’re cutting it close, but you feel guilty for ignoring Sam’s text earlier.";
   else if (path2Choice === "wait")
     story =
-      "You rush toward the elevators, catching a glimpse of your client as the doors slide shut. You’re on the ground floor; the meeting is on the 10th.";
+      "You rush toward the elevators, catching a glimpse of your client as the doors slide shut. You’re on the ground floor...the meeting is on the 10th.";
   else if (path2Choice === "focus")
     story =
       "As you exit the bus, your phone buzzes. It’s a text from Sam: “I’m packing a bag. I need to stay at my sister’s for a while.”";
   else if (path2Choice === "call")
     story =
-      "As you walk into Apex, you check your phone. No response to your voicemail. Was a voicemail enough to fix this?";
+      "As you walk into Apex, you check your phone. No response to your voicemail. You know it hasn’t been long. Still, you can’t help but worry – was a voicemail enough to fix this?";
 
   let textHeight = max(getTextBlockHeight(story, TEXT_W), MIN_TEXT_H);
   let btnY = TEXT_Y + textHeight + BUTTON_SPACING;
