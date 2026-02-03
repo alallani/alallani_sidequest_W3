@@ -1,4 +1,4 @@
-## Project Title
+## Side Quest Week 3: Interactive Story
 
 GBDA302 Week 3 Example 1: Instructions Screen with Back button
 

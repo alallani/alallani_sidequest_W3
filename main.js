@@ -70,6 +70,8 @@ function draw() {
     drawStationResult();
   } else if (currentScreen === "apex_result") {
     drawApexResults();
+  } else if (currentScreen === "instr") drawInstr();
+  {
   }
 }
 
@@ -95,6 +97,7 @@ function mousePressed() {
   else if (currentScreen === "apex") apexMousePressed();
   else if (currentScreen === "results") resultsMousePressed();
   else if (currentScreen === "apex_result") apexResultsMousePressed();
+  else if (currentScreen === "instr") instrMousePressed();
 }
 
 // ------------------------------
