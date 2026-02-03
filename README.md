@@ -34,11 +34,10 @@ At the end, a Connection score below 40% triggers a breakup, and a Delay score a
 
 ## Assets
 
-> - 'assets/images/intro_image.png' (downloaded from Freepik) [4]
-
-- assets/images/kitchen_image.png (downloaded from Freepik) [2]
-- assets/images/station_image.png (downloaded from Freepik) [3]
-- assets/images/apex_image.png (downloaded from Unsplash) [1]
+> - `assets/images/intro_image.png` (downloaded from Freepik) [4]
+> - `assets/images/kitchen_image.png` (downloaded from Freepik) [2]
+> - `assets/images/station_image.png` (downloaded from Freepik) [3]
+> - `assets/images/apex_image.png` (downloaded from Unsplash) [1]
 
 ---
 

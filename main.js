@@ -37,10 +37,10 @@ let path3Choice = 0; // Stores 1 (Left Button) or 2 (Right Button)
 
 function preload() {
   // Path: assets folder -> images folder -> filename
-  imgIntro = loadImage("assets/images/intro_image.png");
-  imgKitchen = loadImage("assets/images/kitchen_image.png");
-  imgStation = loadImage("assets/images/station_image.png");
-  imgApex = loadImage("assets/images/apex_image.jpg");
+  imgIntro = loadImage("assets/images/intro_image.png"); // [4]
+  imgKitchen = loadImage("assets/images/kitchen_image.png"); // [2]
+  imgStation = loadImage("assets/images/station_image.png"); // [3]
+  imgApex = loadImage("assets/images/apex_image.jpg"); // [1]
 }
 
 /** SETUP & DRAW */
