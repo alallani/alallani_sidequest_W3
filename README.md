@@ -1,39 +1,52 @@
 ## Side Quest Week 3: Interactive Story
 
-GBDA302 Week 3 Example 1: Instructions Screen with Back button
-
 ---
 
 ## Authors
 
-Karen Cochrane and David Han
+Aliza Lallani, 21035348
 
 ---
 
 ## Description
 
-This p5.js project demonstrates a simple multi-screen game structure using a state-based approach. The example includes a start screen, an instructions screen with a back button, a basic game screen, and win/lose outcome screens. The focus is on showing how to separate screens into different files, route input based on the current game state, and design simple UI elements such as buttons and keyboard controls.
+This project invites users to navigate a multi-screen story using a state-based approach. Players make choices that affect two stats, balancing their relationship or their work presentation. Ultimately, they reach one of four possible endings. The story includes an intro screen, instructions with a back button, multiple game screens, and outcome screens. The layout of the game screens is inspired by Dispatch, as shown in class.
 
 ---
 
-## Learning Goals
+## Setup & Interaction Instructions
 
-- Understand how to manage multiple game states using a shared currentScreen variable
-- Practice separating code across multiple files for readability and maintenance
-- Implement clickable and keyboard-accessible UI buttons
-- Learn how to route draw(), mousePressed(), and keyPressed() logic based on the active screen
-- Build a basic instructions screen with a functional back button
+User begins by reading the story context:
+
+- Click "How to Play" for Instructions
+- Click "Start" to begin the story
+
+User then progresses through three scenes (Kitchen, Train Station, Office), clicking on choices to influence their stats.
+
+Stats update after each choice:
+
+- Connection: Starts at 40%.
+- Delay: Starts at 0 mins
+
+At the end a Connection score below 40% triggers a breakup, and a Delay score above 10 mins results in being fired.
 
 ---
 
 ## Assets
 
-N/A
+- assets/images/intro_image.png (downloaded from Freepik) [4]
+- assets/images/kitchen_image.png (downloaded from Freepik) [2]
+- assets/images/station_image.png (downloaded from Freepik) [3]
+- assets/images/apex_image.png (downloaded from Unsplash) [1]
 
 ---
 
-## GenAI
+## References
 
-The code was written by Dr. Karen Cochrane but she used GenAI to write the comments.
+[1] Bernd 📷 Dittrich. 2024. A room with a table and potted trees. Unsplash. https://unsplash.com/photos/a-room-with-a-table-chairs-and-potted-trees-m0B-uK0GNAM
 
----
+[2] freepik. 3d cartoon coffee cup. Freepik. https://www.freepik.com/free-ai-image/3d-cartoon-coffee-cup_273781640.htm
+
+[3] freepik. Traveling by train lifestyle. Freepik. https://www.freepik.com/free-photo/traveling-by-train-lifestyle_49630375.htm
+
+[4] rawpixel.com. Bedroom alarm clock. Freepik. https://www.freepik.com/free-photo/bedroom-alarm-clock_3218178.htm
