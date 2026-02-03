@@ -28,13 +28,14 @@ Stats update after each choice:
 - Connection: Starts at 40%.
 - Delay: Starts at 0 mins
 
-At the end a Connection score below 40% triggers a breakup, and a Delay score above 10 mins results in being fired.
+At the end, a Connection score below 40% triggers a breakup, and a Delay score above 10 mins results in being fired.
 
 ---
 
 ## Assets
 
-- assets/images/intro_image.png (downloaded from Freepik) [4]
+> - 'assets/images/intro_image.png' (downloaded from Freepik) [4]
+
 - assets/images/kitchen_image.png (downloaded from Freepik) [2]
 - assets/images/station_image.png (downloaded from Freepik) [3]
 - assets/images/apex_image.png (downloaded from Unsplash) [1]
