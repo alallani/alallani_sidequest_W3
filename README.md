@@ -10,7 +10,7 @@ Aliza Lallani, 21035348
 
 ## Description
 
-This project invites users to navigate a multi-screen story using a state-based approach. Players make choices that affect two stats, balancing their relationship or their work presentation. Ultimately, they reach one of four possible endings. The story includes an intro screen, instructions with a back button, multiple game screens, and outcome screens. The layout of the game screens is inspired by Dispatch, as shown in class.
+This project invites users to navigate a multi-screen story using a state-based approach. Players make choices that affect two stats, balancing their relationship and their work presentation. Ultimately, they reach one of four possible endings. The story includes an intro screen, instructions with a back button, multiple game screens, and outcome screens. The layout of the game screens is inspired by Dispatch, as shown in class.
 
 ---
 
@@ -21,14 +21,12 @@ User begins by reading the story context:
 - Click "How to Play" for Instructions
 - Click "Start" to begin the story
 
-User then progresses through three scenes (Kitchen, Train Station, Office), clicking on choices to influence their stats.
-
-Stats update after each choice:
+User then progresses through three scenes (Kitchen, Train Station, Office), clicking on choices to influence their stats:
 
 - Connection: Starts at 40%.
 - Delay: Starts at 0 mins
 
-At the end, a Connection score below 40% triggers a breakup, and a Delay score above 10 mins results in being fired.
+Stats update after each choice. At the end, a Connection score below 40% triggers a breakup, and a Delay score above 10 mins results in being fired.
 
 ---
 
